@@ -1,0 +1,452 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -------------- HEADER LOGO AND COVER -------------- */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: hsl(170 100% 13%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.logo {
+    width: 4rem;
+    height: auto;
+
+}
+
+.img-link {
+    outline: none;
+}
+
+.nav-link {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid hsl(154 100% 54%);
+    border-radius: 0.25em;
+    /* hue saturation lightness */
+    color: hsl(154 100% 54%);
+    margin-right: 25px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.25em 1em;
+    /* background-color: lightgoldenrodyellow; */
+    text-shadow: 
+    0 0 0.125em hsl(0 0% 100% / 0.5),
+    0 0 0.125em currentColor;
+    /* inset adds the shadow to the inside of that element */
+    box-shadow: 
+    inset 0 0 0.5em hsl(154 100% 54%),
+    0 0 0.5em hsl(154 100% 54%);
+    position: relative;
+    outline: none;
+    z-index: 1;
+}
+
+.nav-link::before {
+    pointer-events: none;
+    content: "";
+    position:absolute;
+    background-color: hsl(154 100% 54%);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.6;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em hsl(154 100% 54%);
+    opacity: 0;
+    background-color: hsl(154 100% 54%);
+    z-index: -12;
+    
+    transition: opacity 100ms linear;
+}
+
+.nav-link:hover, .nav-link:focus {
+    
+    color: hsl(170 100% 13%);
+    text-shadow: none;
+    /* animation: neon_flicker 2s linear infinite alternate forwards; */
+}
+
+.nav-link:hover::before {
+    opacity: 1;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+ /* COVER STARTED */
+
+.cover {
+    width: 100%;
+    height: 500px;
+    background-image: url(/assets/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+    background-size: 100% auto;
+    box-sizing: border-box;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.cover-heading {
+    margin: 0;
+    font-size: 3rem;
+    color: #fff;
+    background-color: hsl(154 50% 54%);
+    opacity: 0.8;
+    letter-spacing: 1.5;
+    /* SETTING UP CUSTOM TIME FUNCTION  */
+    animation: text-transition 3s cubic-bezier(.31,.57,.94,1.41) 1;
+}
+
+.cover-heading:hover, .cover-msg:hover {
+    opacity: 1;
+    cursor: context-menu;
+}
+
+.cover-msg {
+    font-size: 1rem;
+    color: #fff;
+    background-color: hsl(154 50% 54%);
+    opacity: 0.8;
+    animation: text-transition2 4s cubic-bezier(.31,.57,.94,1.41) 1;
+}
+/* -------------- END HEADER LOGO AND COVER -------------- */
+
+/* -------------- GRID SECTION -------------- */
+
+.grid-container {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+}
+
+.title-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.small-title {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.msg {
+    font-size: 12px;
+    color: #666;
+}
+
+.coding-dashboard{
+    background-color: rgb(235, 235, 235);
+    padding: 16px;
+}
+
+.coding-area {
+    border-bottom: 3px solid #666;
+}
+
+.code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#section-3 {
+    margin-bottom: 20px;
+}
+
+/* -------------- END INSTALLATION SECTION -------------- */
+
+/* -------------- FOOTER SECTION -------------- */
+
+footer {
+    background-color: hsl(154 50% 54%);
+    padding: 15px;
+}
+
+.footer-grid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.footer-heading {
+    margin: 0;
+    font-size: 44px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left-footer > p.msg {
+    color: white;
+}
+
+.right-footer > p {
+    font-size: 12px;
+}
+
+.github-heading {
+    font-weight: 600;
+}
+
+/* -------------- END FOOTER SECTION -------------- */
+
+/* CODING DASHBOARD CONTAINER */
+
+.coding-dashboard:hover {
+    background-color: orange;
+    border-radius: 40px;
+    box-shadow: 0 5px 5px #ccc;
+    transition: background-color 3s, border-radius 3s;
+    cursor: pointer;
+}
+
+.grow-card:hover {
+    animation: grow 3s ease-in-out 1 alternate forwards;
+}
+
+.rotate-y-card:hover {
+    animation: rotation 3s ease-in-out 1 alternate forwards;
+}
+
+.run_back_forth:hover {
+    animation: runningBF 1.5s cubic-bezier(.31,.57,.94,1.41) 1 alternate forwards;
+}
+
+.rocket:hover {
+    animation: rocketAnimation 3s ease-in 1 alternate forwards;
+}
+
+.crazy-rotation:hover {
+    animation: crazyRotation 3s linear 1 normal forwards;
+}
+
+.side-step:hover {
+    animation: sideStep 2s linear 1 normal forwards;
+}
+
+.shakey:hover {
+    animation: shakeShake 2s linear 1 normal forwards;
+}
+
+.drill:hover {
+    animation: drillDrill 2s linear 1 normal forwards;
+}
+
+/* -------------- TRANSITION AND ANIMATION -------------- */
+@keyframes neon_flicker {
+
+    0%, 17%, 22%, 25%, 28%, 55%, 59%, 100% {
+
+        box-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(255, 230, 0),
+            0 0 80px rgb(255, 230, 0),
+            0 0 90px rgb(255, 230, 0),
+            0 0 100px rgb(255, 230, 0),
+            0 0 150px rgb(255, 230, 0);
+
+    }
+    
+    20%, 27%, 57% {
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+}
+
+@keyframes text-transition {
+    0% {
+        transform: translate(-150%, 0);
+    }
+    100% {
+        transform: translate(0%, 0);
+    }
+}
+
+@keyframes text-transition2 {
+    0% {
+        transform: translate(-250%, 0);
+    }
+    100% {
+        transform: translate(0%, 0);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1.1, 1.1);
+    }
+    25% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    75% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(360deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes runningBF  {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rocketAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(50%);
+    }
+    50% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes crazyRotation {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes sideStep {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(200%);
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(200%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shakeShake {
+    0% {
+        transform: rotateX(25deg) rotateY(25deg) rotateZ(25deg);
+    }
+    15% {
+        transform: rotateX(-25deg) rotateY(-25deg) rotateZ(-25deg);
+    }
+    30% {
+        transform: rotateX(25deg) rotateY(25deg) rotateZ(25deg);
+    }
+    45% {
+        transform: rotateX(-25deg) rotateY(-25deg) rotateZ(-25deg);
+    }
+    60% {
+        transform: rotateX(25deg) rotateY(25deg) rotateZ(25deg);
+    }
+    75% {
+        transform: rotateX(-25deg) rotateY(-25deg) rotateZ(-25deg);
+    }
+    90% {
+        transform: rotateX(25deg) rotateY(25deg) rotateZ(25deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes drillDrill {
+    0% {
+        transform: rotateY(0deg) translateY(0%);
+    }
+    15% {
+        transform: rotateY(360deg) translateY(-100%);
+    }
+    40% {
+        transform: rotateY(720deg) translateY(-100%);
+    }
+    70% {
+        transform: rotateY(-720deg) translateY(250%);
+    }
+    100% {
+        transform: rotateY(0deg) translateY(0%);
+    }
+}

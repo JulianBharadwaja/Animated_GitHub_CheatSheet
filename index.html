@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://github.githubassets.com/images/modules/logos_page/Octocat.png">
+    <title>GIT CHEAT SHEET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <!-- TOP NAR BAR -->
+        <nav id="topbar">
+            <div class="left-bar">
+                <a href="#" class="img-link">
+                    <img class="logo" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="">
+                </a>
+            </div>
+            <div class="right-bar">
+                <a class="nav-link" href="#">INSTALLATION & GUIS</a>
+                <a class="nav-link" href="#">STAGE & SNAPSHOT</a>
+                <a class="nav-link" href="#">BRANCH & MERGE</a>
+                <a class="nav-link" href="#">SHARE & UPDATE</a>
+            </div>
+        </nav> 
+        <!-- COVER AND HEADING -->
+        <div class="cover">
+            <p class="cover-heading">GitHub Cheat Sheet</p>
+            <p class="cover-msg">Git is the free and open source distributed version control system that's responsible for everything GitHub
+                related that happens locally on your computer. This cheat sheet features the most important and commonly
+                used Git commands for easy reference.</p>
+        </div>   
+    </header>
+    <main>
+        <!-- MAIN SECTION -->
+        <section id="installation">
+
+            <div class="grid-container">
+
+                <div class="install">
+
+                    <p class="title-heading">Installation & GUIS</p>
+
+                    <p class="msg">With platform specific installers for Git, GitHub also provides the
+                        ease of staying up-to-date with the latest releases of the command
+                        line tool while providing a graphical user interface for day-to-day
+                        interaction, review, and repository synchronization.</p>
+
+                    <p class="small-title">GitHub for Windows</p>
+                    <p class="msg">htps://windows.github.com</p>
+
+                    <p class="small-title">GitHub for Mac</p>
+                    <p class="msg">htps://mac.github.com</p>
+
+                    <p class="msg">For Linux and Solaris platforms, the latest release is available on
+                        the official Git web site.</p>
+                        
+                    <p class="small-title">Git for All Platforms</p>
+                    <p class="msg">htp://git-scm.com</p>
+
+                </div>
+                
+                <div class="setup">
+
+                    <p class="title-heading">SETUP</p>
+                    <p class="msg">Configuring user information used across all local repositories</p>
+                    
+                    <div class="coding-dashboard grow-card">
+
+                        <div class="coding-area">
+                            <p class="code">git config --global user.name “[firstname lastname]”</p>
+                            <p class="msg">set a name that is identifiable for credit when review version history</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git config --global user.email “[valid-email]”</p>
+                            <p class="msg">set an email address that will be associated with each history marker</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git config --global color.ui auto</p>
+                            <p class="msg">set automatic command line coloring for Git for easy reviewing</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="init">
+
+                    <p class="title-heading">SETUP & INIT</p>
+                    <p class="msg">Configuring user information, initializing and cloning repositories</p>
+
+                    <div class="coding-dashboard rotate-y-card">
+
+                        <div class="coding-area">
+                            <p class="code">git init</p>
+                            <p class="msg">initialize an existing directory as a Git repository</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git clone [url]</p>
+                            <p class="msg">retrieve an entire repository from a hosted location via URL</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- INSPECT & COMPARE -->
+
+        <section>
+
+            <div class="grid-container">
+
+                <div class="inspect-compare">
+
+                    <p class="title-heading">INSPECT & COMPARE</p>
+                    <p class="msg">Examining logs, diffs and object information</p>
+
+                    <div class="coding-dashboard run_back_forth">
+
+                        <div class="coding-area">
+                            <p class="code">git log</p>
+                            <p class="msg">show the commit history for the currently active branch</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git log branchB..branchA</p>
+                            <p class="msg">show the commits on branchA that are not on branchB</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git log --follow [file]</p>
+                            <p class="msg">show the commits that changed file, even across renames</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git diff branchB...branchA</p>
+                            <p class="msg">show the diff of what is in branchA that is not in branchB</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git show [SHA]</p>
+                            <p class="msg">show any object in Git in human-readable format</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="tracking">
+
+                    <p class="title-heading">TRACKING PATH CHANGES</p>
+                    <p class="msg">Versioning file removes and path changes</p>
+
+                    <div class="coding-dashboard rocket">
+
+                        <div class="coding-area">
+                            <p class="code">git rm [file]</p>
+                            <p class="msg">delete the file from project and stage the removal for commit</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git mv [existing-path] [new-path]</p>
+                            <p class="msg">change an existing file path and stage the move</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git log --stat -M</p>
+                            <p class="msg">show all commit logs with indication of any paths that moved</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ignoring">
+                    
+                    <p class="title-heading">IGNORING PATTERNS</p>
+                    <p class="msg">Preventing unintentional staging or commiting of files</p>
+
+                    <div class="coding-dashboard crazy-rotation">
+
+                        <div class="coding-area">
+                            <p class="code">logs/ <br>
+                                *.notes <br>
+                                pattern*/</p>
+                            <p class="msg">Save a file with desired paterns as .gitignore with either direct string
+                                matches or wildcard globs.</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git config --global core.excludesfile [file]</p>
+                            <p class="msg">system wide ignore patern for all local repositories</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        <!-- SHARE & UPDATE -->
+
+        <section id="section-3">
+
+            <div class="grid-container">
+
+                <div class="share-update">
+
+                    <p class="title-heading">SHARE & UPDATE</p>
+                    <p class="msg">Retrieving updates from another repository and updating local repos</p>
+
+                    <div class="coding-dashboard shakey">
+
+                        <div class="coding-area">
+                            <p class="code">git remote add [alias] [url]</p>
+                            <p class="msg">add a git URL as an alias</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git fetch [alias]</p>
+                            <p class="msg">fetch down all the branches from that Git remote</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git merge [alias]/[branch]</p>
+                            <p class="msg">merge a remote branch into your current branch to bring it up to date</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git push [alias] [branch]</p>
+                            <p class="msg">Transmit local branch commits to the remote repository branch</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git pull</p>
+                            <p class="msg">fetch and merge any commits from the tracking remote branch</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="rewrite history">
+
+                    <p class="title-heading">REWRITE HISTORY</p>
+                    <p class="msg">Rewriting branches, updating commits and clearing history</p>
+
+                    <div class="coding-dashboard  side-step">
+
+                        <div class="coding-area">
+                            <p class="code">git rebase [branch]</p>
+                            <p class="msg">apply any commits of current branch ahead of specified one</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git reset --hard [commit]</p>
+                            <p class="msg">clear staging area, rewrite working tree from specified commit</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="temporary commits">
+                    
+                    <p class="title-heading">TEMPORARY COMMITS</p>
+                    <p class="msg">Temporarily store modified, tracked files in order to change branchess</p>
+
+                    <div class="coding-dashboard drill">
+
+                        <div class="coding-area">
+                            <p class="code">git stash</p>
+                            <p class="msg">Save modified and staged changes</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git stash list</p>
+                            <p class="msg">list stack-order of stashed file changes</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git stash pop</p>
+                            <p class="msg">write working from top of stash stack</p>
+                        </div>
+
+                        <div class="coding-area">
+                            <p class="code">git stash drop</p>
+                            <p class="msg">discard the changes from top of stash stack</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer-grid">
+            <div class="left-footer">
+
+                <p class="footer-heading"><span class="github-heading">GitHub</span> Education</p>
+                <p class="msg">Teach and learn beter, together. GitHub is free for students and teachers. Discounts available for other educational uses.</p>
+          
+            </div>
+
+            <div class="right-footer">
+                <p class="email"><i class="fas fa-envelope"></i> education@github.com</p>
+                <p class="email"><i class="fas fa-link"></i> education.github.com</p>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
